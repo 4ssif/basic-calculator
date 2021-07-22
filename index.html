@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="calculator">
+        <h1>Calculator</h1>
+
+        <input type="text" id="input">
+        <table>
+            <tr>
+                <td><button onclick="numButton(9)" class="btn btn-dark" id="9">9</button></td>
+                <td><button onclick="numButton(8)" class="btn btn-dark" id="8">8</button></td>
+                <td><button onclick="numButton(7)" class="btn btn-dark" id="7">7</button></td>
+                <td><button onclick="div()" class="btn btn-dark">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numButton(6)" class="btn btn-dark" id="6">6</button></td>
+                <td><button onclick="numButton(5)" class="btn btn-dark" id="5">5</button></td>
+                <td><button onclick="numButton(4)" class="btn btn-dark" id="4">4</button></td>
+                <td><button onclick="into()" class="btn btn-dark" >*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numButton(3)" class="btn btn-dark" id="3">3</button></td>
+                <td><button onclick="numButton(2)" class="btn btn-dark" id="2">2</button></td>
+                <td><button onclick="numButton(1)" class="btn btn-dark" id="1">1</button></td>
+                <td><button onclick="min()" class="btn btn-dark" >-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="clr()" class="btn btn-dark">C</button></td>
+                <td><button onclick="numButton(0)" class="btn btn-dark" id="0">0</button></td>
+                <td><button onclick="equal()" class="btn btn-dark">=</button></td>
+                <td><button onclick="plus()" class="btn btn-dark">+</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        
+        const input = document.getElementById('input');
+
+
+        function numButton(x){
+            const buttonText = document.getElementById(x).innerText;
+            input.value += buttonText;
+
+        }
+        function plus(){
+            input.value += '+';
+        }
+        function min(){
+            input.value += '-';
+        }
+        function into(){
+            input.value += '*';
+        }
+        function div(){
+            input.value += '/';
+        }
+        function clr(){
+            input.value = "";
+        }
+        function equal(){
+            input.value = eval(input.value);
+        }
+        
+    </script>
+</body>
+</html>

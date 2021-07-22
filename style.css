@@ -1,0 +1,30 @@
+body{
+    background: gray;
+}
+.calculator{
+    width:fit-content;
+    text-align: center;
+    background-color:cadetblue;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+input{
+    text-align: right;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+}
+#input{
+    width: 230px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.btn:hover{
+    background-color:indianred;
+}
